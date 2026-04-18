@@ -16,7 +16,7 @@ This package provides a standalone ROS 2 explorer node that:
 - builds an MRTSP-style cost matrix
 - dispatches the first frontier from a greedy MRTSP ordering to Nav2 using `NavigateToPose`
 
-The package is intentionally independent from RoboPal and can be reused in any Nav2-based stack.
+The package is intentionally independent and can be reused in any Nav2-based stack.
 
 ## Public ROS Interfaces
 
