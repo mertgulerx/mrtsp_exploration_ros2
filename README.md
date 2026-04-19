@@ -8,6 +8,21 @@ ROS 2 Jazzy frontier exploration package implementing the method from:
 Check out C++ implementation package for more features: 
 - [frontier_exploration_ros2](https://github.com/mertgulerx/frontier_exploration_ros2)
 
+## Overview
+
+This package provides a standalone ROS 2 explorer node that:
+
+- subscribes to `/map` and `/global_costmap/costmap`
+- optimizes the map in real time using bilateral filtering and dilation
+- extracts frontiers using WFD on the optimized map
+- computes frontier costs using the paper's equations
+- builds an MRTSP-style cost matrix
+- dispatches the first frontier from a greedy MRTSP ordering to Nav2 using `NavigateToPose`
+
+The package is intentionally independent and can be reused in any Nav2-based stack.
+
+## Flowchart Diagram
+
 
 ```
            +-------------------------+
@@ -59,18 +74,6 @@ Check out C++ implementation package for more features:
 |             |
 +-------------+
 ```
-## Overview
-
-This package provides a standalone ROS 2 explorer node that:
-
-- subscribes to `/map` and `/global_costmap/costmap`
-- optimizes the map in real time using bilateral filtering and dilation
-- extracts frontiers using WFD on the optimized map
-- computes frontier costs using the paper's equations
-- builds an MRTSP-style cost matrix
-- dispatches the first frontier from a greedy MRTSP ordering to Nav2 using `NavigateToPose`
-
-The package is intentionally independent and can be reused in any Nav2-based stack.
 
 ## Public ROS Interfaces
 
