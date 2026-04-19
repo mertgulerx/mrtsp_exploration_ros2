@@ -16,7 +16,7 @@ This package provides a standalone ROS 2 explorer node that:
 - optimizes the map in real time using bilateral filtering and dilation
 - extracts frontiers using WFD on the optimized map
 - computes frontier costs using the paper's equations
-- builds an MRTSP-style cost matrix
+- builds an **MRTSP (Minimum Ratio Traveling Sales Person)** cost matrix
 - dispatches the first frontier from a greedy MRTSP ordering to Nav2 using `NavigateToPose`
 
 The package is intentionally independent and can be reused in any Nav2-based stack.
