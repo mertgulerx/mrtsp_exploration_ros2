@@ -5,7 +5,7 @@ ROS 2 Jazzy frontier exploration package implementing the method from:
 - Chunyang Liu et al., "Enhancing autonomous exploration for robotics via real time map optimization and improved frontier costs", Scientific Reports (2025)
 - DOI: [10.1038/s41598-025-97231-9](https://doi.org/10.1038/s41598-025-97231-9)
 
-Check out main C++ exploration package for more features: 
+Check out main C++ exploration package for more details and features: 
 - [frontier_exploration_ros2](https://github.com/mertgulerx/frontier_exploration_ros2)
 
 ## Overview
