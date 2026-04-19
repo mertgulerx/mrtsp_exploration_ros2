@@ -7,6 +7,58 @@ ROS 2 Jazzy frontier exploration package implementing the method from:
 
 Check out C++ implementation package for more features: 
 - [frontier_exploration_ros2](https://github.com/mertgulerx/frontier_exploration_ros2)
+
+
+```
+           +-------------------------+
++----------| Map & Costmap Input     |
+|          +-------------------------+
+|                       |
+|                       v
+|          +-------------------------+
+|          | Decision-Map            |
+|          | Optimization            |
+|          +-------------------------+
+|                       |
+|                       v
+|          +-------------------------+
+|          | WFD-Style               |
+|          | Frontier Extraction     |
+|          +-------------------------+
+|                       |
+|                       v
+|         +---------------------------+
+|         | Compute MRTSP Cost Matrix |
+|         | & Greedy Ordering         |
+|         +---------------------------+
+|                       |
+|                       |
+|                       v
+|          +-------------------------+
+|          | Dispatch Goal via Nav2  |
+|          +-------------------------+
+|                       |
+|                       v
+|          +-------------------------+
+|          | Monitor & Handle        |
+|          | Preemption/Blocking     |
+|          +-------------------------+
+|                       |
+|                       v
+|                  .-----------.
+|                /               \
+|               /     Frontiers    \
+|              /     Exhausted?     \
+|             v                   v
+|           No                   Yes
+|             |                   |
+|             |                   v
+|             |          +---------------------------+
+|             |          | Publish Completion Event  |
+|             |          +---------------------------+
+|             |
++-------------+
+```
 ## Overview
 
 This package provides a standalone ROS 2 explorer node that:
