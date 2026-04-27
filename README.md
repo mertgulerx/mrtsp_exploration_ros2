@@ -8,7 +8,8 @@ ROS 2 Jazzy frontier exploration package implementing the method from:
 Check out main C++ exploration package for more details and features: 
 - [frontier_exploration_ros2](https://github.com/mertgulerx/frontier_exploration_ros2)
 
-Benchmarks against other packages: [autonomous-exploration-demo-benchmark](https://github.com/mertgulerx/autonomous-exploration-demo-benchmark)
+Benchmarks against other packages: 
+- [autonomous-exploration-demo-benchmark](https://github.com/mertgulerx/autonomous-exploration-demo-benchmark)
 
 ## Overview
 
