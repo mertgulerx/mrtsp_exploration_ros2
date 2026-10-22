@@ -26,56 +26,17 @@ The package is intentionally independent and can be reused in any Nav2-based sta
 
 ## Flowchart Diagram
 
+```mermaid
+flowchart TD
+    A["Map & Costmap Input"] --> B["Decision-Map Optimization"]
+    B --> C["WFD-Style Frontier Extraction"]
+    C --> D["Compute MRTSP Cost Matrix & Greedy Ordering"]
+    D --> E["Dispatch Goal via Nav2"]
+    E --> F["Monitor & Handle Preemption/Blocking"]
+    F --> G{"Frontiers Exhausted?"}
 
-```
-           +-------------------------+
-+----------| Map & Costmap Input     |
-|          +-------------------------+
-|                       |
-|                       v
-|          +-------------------------+
-|          | Decision-Map            |
-|          | Optimization            |
-|          +-------------------------+
-|                       |
-|                       v
-|          +-------------------------+
-|          | WFD-Style               |
-|          | Frontier Extraction     |
-|          +-------------------------+
-|                       |
-|                       v
-|         +---------------------------+
-|         | Compute MRTSP Cost Matrix |
-|         | & Greedy Ordering         |
-|         +---------------------------+
-|                       |
-|                       |
-|                       v
-|          +-------------------------+
-|          | Dispatch Goal via Nav2  |
-|          +-------------------------+
-|                       |
-|                       v
-|          +-------------------------+
-|          | Monitor & Handle        |
-|          | Preemption/Blocking     |
-|          +-------------------------+
-|                       |
-|                       v
-|                  .-----------.
-|                /               \
-|               /     Frontiers    \
-|              /     Exhausted?     \
-|             v                   v
-|           No                   Yes
-|             |                   |
-|             |                   v
-|             |          +---------------------------+
-|             |          | Publish Completion Event  |
-|             |          +---------------------------+
-|             |
-+-------------+
+    G -->|No| A
+    G -->|Yes| H["Publish Completion Event"]
 ```
 
 ## Public ROS Interfaces
