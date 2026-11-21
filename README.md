@@ -316,4 +316,12 @@ t_lb(j) = min(
 
 This package uses a greedy traversal over that MRTSP-style matrix. It is therefore a practical ROS 2 implementation of the paper's decision model, not an exhaustive MRTSP solver.
 
+## Citation
 
+If you use `mrtsp_exploration_ros2` in your research, please cite the software and specify the version or commit used. Please also cite the method it implements: Liu, C., Zhang, D., Liu, W. et al. Enhancing autonomous exploration for robotics via real time map optimization and improved frontier costs. Sci Rep 15, 12261 (2025). https://doi.org/10.1038/s41598-025-97231-9
+
+Citation metadata is available in [CITATION.cff](CITATION.cff). You can also use GitHub's **Cite this repository** feature to obtain a formatted citation.
+
+```text
+Güler, M. (2026). mrtsp_exploration_ros2: A ROS 2 Implementation of Real-Time Map Optimization and MRTSP-Based Frontier Exploration (Version 1.0.0) [Computer software]. https://github.com/mertgulerx/mrtsp_exploration_ros2
+```

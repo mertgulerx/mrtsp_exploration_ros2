@@ -1,0 +1,79 @@
+cff-version: 1.2.0
+message: >-
+  If you use mrtsp_exploration_ros2 in your research, please cite
+  this software using the metadata below and specify the version
+  or commit used. Please also cite the method it implements
+  (Liu et al., 2025), listed under references.
+type: software
+
+title: >-
+  mrtsp_exploration_ros2: A ROS 2 Implementation of Real-Time Map
+  Optimization and MRTSP-Based Frontier Exploration
+
+authors:
+  - family-names: "Güler"
+    given-names: "Mert"
+    affiliation: "Yıldız Technical University"
+    orcid: "https://orcid.org/0009-0006-6709-7179"
+
+version: "1.0.0"
+
+license: Apache-2.0
+repository-code: "https://github.com/mertgulerx/mrtsp_exploration_ros2"
+url: "https://github.com/mertgulerx/mrtsp_exploration_ros2"
+
+abstract: >-
+  mrtsp_exploration_ros2 is a standalone ROS 2 Jazzy exploration node
+  that implements the method of Liu et al. (2025), "Enhancing autonomous
+  exploration for robotics via real time map optimization and improved
+  frontier costs". The node subscribes to the occupancy grid and the
+  Nav2 global costmap, optimizes the map in real time with bilateral
+  filtering and dilation, extracts frontiers with wavefront frontier
+  detection on the optimized map, and computes frontier costs with the
+  paper's equations. It builds a Minimum Ratio Traveling Salesman
+  Problem (MRTSP) cost matrix, orders the frontiers greedily and sends
+  the first frontier to Nav2 through NavigateToPose, then replans as the
+  map grows until no frontier remains. The package does not depend
+  on any other exploration framework and can be used in any
+  Nav2-based stack. It is an independent implementation written from
+  the paper, not the authors' code.
+
+keywords:
+  - autonomous exploration
+  - mobile robotics
+  - frontier-based exploration
+  - occupancy grid maps
+  - map optimization
+  - bilateral filtering
+  - wavefront frontier detection
+  - minimum ratio traveling salesman problem
+  - Nav2
+  - ROS 2
+
+references:
+  - type: article
+    title: >-
+      Enhancing autonomous exploration for robotics via real time map
+      optimization and improved frontier costs
+    authors:
+      - family-names: "Liu"
+        given-names: "Chunyang"
+      - family-names: "Zhang"
+        given-names: "Dingfa"
+      - family-names: "Liu"
+        given-names: "Weitao"
+      - family-names: "Sui"
+        given-names: "Xin"
+      - family-names: "Huang"
+        given-names: "Yan"
+      - family-names: "Ma"
+        given-names: "Xiqiang"
+      - family-names: "Yang"
+        given-names: "Xiaokang"
+      - family-names: "Wang"
+        given-names: "Xiao"
+    journal: "Scientific Reports"
+    volume: 15
+    start: "12261"
+    year: 2025
+    doi: "10.1038/s41598-025-97231-9"
