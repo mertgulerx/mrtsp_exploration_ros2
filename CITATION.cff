@@ -17,6 +17,15 @@ authors:
     orcid: "https://orcid.org/0009-0006-6709-7179"
 
 version: "1.0.0"
+doi: "10.5281/zenodo.24420620"
+
+identifiers:
+  - description: "DOI for all versions of mrtsp_exploration_ros2"
+    type: doi
+    value: "10.5281/zenodo.24420619"
+  - description: "DOI for version 1.0.0 of mrtsp_exploration_ros2"
+    type: doi
+    value: "10.5281/zenodo.24420620"
 
 license: Apache-2.0
 repository-code: "https://github.com/mertgulerx/mrtsp_exploration_ros2"

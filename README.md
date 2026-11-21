@@ -1,5 +1,7 @@
 # mrtsp_exploration_ros2
 
+[![DOI](https://zenodo.org/badge/1213724674.svg)](https://doi.org/10.5281/zenodo.24420619)
+
 ROS 2 Jazzy frontier exploration package implementing the method from:
 
 - Liu, C., Zhang, D., Liu, W. et al. Enhancing autonomous exploration for robotics via real time map optimization and improved frontier costs. Sci Rep 15, 12261 (2025).
@@ -10,6 +12,23 @@ ROS 2 Jazzy frontier exploration package implementing the method from:
 
 Benchmarks against other autonomous exploration algorithms: 
 - [autonomous-exploration-demo-benchmark](https://github.com/mertgulerx/autonomous-exploration-demo-benchmark)
+
+## Citation
+
+If you use `mrtsp_exploration_ros2` in your research, please cite the software and specify the version or commit used. Please also cite the method it implements, Liu et al. (2025), listed above.
+
+Citation metadata is available in [CITATION.cff](CITATION.cff). You can also use GitHub's **Cite this repository** feature to obtain a formatted citation.
+
+```bibtex
+@software{guler2026mrtsp,
+  author    = {G{\"u}ler, Mert},
+  title     = {mrtsp\_exploration\_ros2: A {ROS} 2 Implementation of Real-Time Map Optimization and {MRTSP}-Based Frontier Exploration},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.24420619},
+  url       = {https://doi.org/10.5281/zenodo.24420619}
+}
+```
 
 ## Overview
 
@@ -315,13 +334,3 @@ t_lb(j) = min(
 ```
 
 This package uses a greedy traversal over that MRTSP-style matrix. It is therefore a practical ROS 2 implementation of the paper's decision model, not an exhaustive MRTSP solver.
-
-## Citation
-
-If you use `mrtsp_exploration_ros2` in your research, please cite the software and specify the version or commit used. Please also cite the method it implements: Liu, C., Zhang, D., Liu, W. et al. Enhancing autonomous exploration for robotics via real time map optimization and improved frontier costs. Sci Rep 15, 12261 (2025). https://doi.org/10.1038/s41598-025-97231-9
-
-Citation metadata is available in [CITATION.cff](CITATION.cff). You can also use GitHub's **Cite this repository** feature to obtain a formatted citation.
-
-```text
-Güler, M. (2026). mrtsp_exploration_ros2: A ROS 2 Implementation of Real-Time Map Optimization and MRTSP-Based Frontier Exploration (Version 1.0.0) [Computer software]. https://github.com/mertgulerx/mrtsp_exploration_ros2
-```
